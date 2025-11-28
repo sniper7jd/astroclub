@@ -78,3 +78,68 @@ input::placeholder {
     color: red;
     font-size: 1.2rem;
 }
+
+/* Subtitle */
+.subtitle {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+/* Email hint */
+.email-hint {
+    color: #888;
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+    display: block;
+}
+
+/* Form message (success/error) */
+.form-message {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.form-message.info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+/* Disabled button */
+.subscribe-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Input focus styles */
+.form-group input:focus {
+    outline: none;
+    border-color: #3586ff;
+    box-shadow: 0 0 0 3px rgba(53, 134, 255, 0.1);
+}
+
+/* Invalid input */
+.form-group input:invalid {
+    border-color: #dc3545;
+}
+
+.form-group input:valid {
+    border-color: #28a745;
+}

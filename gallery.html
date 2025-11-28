@@ -38,15 +38,53 @@
 
     <!-- Bottom Section: Grid of Square Images -->
     <section class="grid-container">
-        <div class="grid-item"><img src="images/box1.jpeg" alt="Night Sky"></div>
-        <div class="grid-item"><img src="images/slide1.jpeg" alt="Night Sky"></div>
-        <div class="grid-item"><img src="images/slide2.jpeg" alt="Night Sky"></div>
-        <div class="grid-item"><img src="images/slide2.jpeg" alt="Night Sky"></div>
-        <div class="grid-item"><img src="images/box1.jpeg" alt="Night Sky"></div>
-        <div class="grid-item"><img src="images/slide1.jpeg" alt="Night Sky"></div>
+        <div class="grid-item" onclick="openImageModal('images/box1.jpeg', 'Gallery Image')"><img src="images/box1.jpeg" alt="Night Sky"></div>
+        <div class="grid-item" onclick="openImageModal('images/slide1.jpeg', 'Gallery Image')"><img src="images/slide1.jpeg" alt="Night Sky"></div>
+        <div class="grid-item" onclick="openImageModal('images/slide2.jpeg', 'Gallery Image')"><img src="images/slide2.jpeg" alt="Night Sky"></div>
+        <div class="grid-item" onclick="openImageModal('images/slide2.jpeg', 'Gallery Image')"><img src="images/slide2.jpeg" alt="Night Sky"></div>
+        <div class="grid-item" onclick="openImageModal('images/box1.jpeg', 'Gallery Image')"><img src="images/box1.jpeg" alt="Night Sky"></div>
+        <div class="grid-item" onclick="openImageModal('images/slide1.jpeg', 'Gallery Image')"><img src="images/slide1.jpeg" alt="Night Sky"></div>
     </section>
     
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal" onclick="closeImageModal()">
+        <div class="image-modal-content" onclick="event.stopPropagation();">
+            <span class="image-modal-close" onclick="closeImageModal()">&times;</span>
+            <img id="modalImage" src="" alt="">
+        </div>
+    </div>
     
+    <footer class="footer">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">  
+            <li class="social-icon__item">
+                <a class="social-icon__link" onclick="window.open('https://ithaca.campuslabs.com/engage/organization/astronomyclub', '_blank')">
+                    <img src="images/mouse-click-svgrepo-com.svg" alt="IC Engage" class="icon-ic-engage">
+                </a>
+            </li>
+            <li class="social-icon__item">
+                <a class="social-icon__link" onclick="window.open('https://www.instagram.com/icastroclub/', '_blank')">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu">
+            <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
+            <li class="menu__item"><a class="menu__link" href="events.html">Events</a></li>
+            <li class="menu__item"><a class="menu__link" href="gallery.html">Gallery</a></li>
+            <li class="menu__item"><a class="menu__link" href="about.html">About Us</a></li>
+            <li class="menu__item"><a class="menu__link" href="signup.html">Sign Up</a></li>
+        </ul>
+        <p>&copy;2024 IC Astronomy Club | All Rights Reserved</p>
+    </footer>
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="js/gallery.js"></script>
 </body>
 </html>

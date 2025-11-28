@@ -4,6 +4,8 @@ body, html {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f9;
     overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Grid container */
@@ -14,32 +16,34 @@ body, html {
         "welcome"
         "stars"
         "foot";
-    grid-template-rows: 750px 750px 750px 100px; /* Each section is 750px in height */
+    grid-template-rows: auto auto auto auto; /* Auto height for flexible content */
     grid-template-columns: 1fr; 
     width: 100%;
-    height: auto; 
+    min-height: 100vh;
+    scroll-snap-type: none;
+    overflow: visible;
 }
 
 /* Section styles */
 
 .top-section {
     grid-area: top;
-    height: 100%; 
+    min-height: 750px; 
 }
 
 .welcome-section {
     grid-area: welcome;
-    height: 100%; 
+    min-height: 750px;
 }
 
 .stars-section {
     grid-area: stars;
-    height: 100%; 
+    min-height: 750px;
 }
 
 .footer {
     grid-area: foot;
-    height: 100%; 
+    min-height: 200px;
 }
 
 /* Top section */
@@ -52,7 +56,7 @@ body, html {
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     text-align: center;
-    margin-top: -40px;
+    position: relative;
 }
 
 .top-section h1 {
@@ -67,7 +71,6 @@ body, html {
     padding: 4rem 2rem;
     text-align: center;
     line-height: 1.8;
-    margin-top: -40px;
 }
 
 .welcome-section h2 {

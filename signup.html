@@ -3,51 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign up Page</title>
+    <title>Sign Up - IC Astronomy Club</title>
+    <meta http-equiv="refresh" content="0; url=https://docs.google.com/forms/d/e/1FAIpQLScJR0Z_w6YG7iKdmOny0yvLplqP_9Pe2hZVZoW5ZRTCPuUy1A/viewform?usp=sf_link">
     <link rel="stylesheet" href="styles/headfoot.css">
-    <link rel="stylesheet" href="styles/signup.css">
-    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        .redirect-message {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+        }
+        .redirect-message h2 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        .redirect-message p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+        .redirect-link {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #3586ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+        .redirect-link:hover {
+            background-color: #2b6bbd;
+        }
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #3586ff;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    <script>
+        // Immediate redirect to Google Form
+        window.location.replace("https://docs.google.com/forms/d/e/1FAIpQLScJR0Z_w6YG7iKdmOny0yvLplqP_9Pe2hZVZoW5ZRTCPuUy1A/viewform?usp=sf_link");
+    </script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">
-            <img src="images/ursa.svg" alt="Logo" class="logo-image">
-            <span>IC Astronomy Club</span>
-        </div>
-        <div class="menu">
-            <a href="index.html">Home</a>
-            <a href="events.html">Events</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="about.html">About Us</a>
-            <a href="signup.html" class="signup">Sign Up</a>
-        </div>
-    </nav>
-    <main>
-    <div class="signup-container">
-        <h2>Sign Up for IC Astronomy Club</h2>
-        <form class="signup-form">
-            <div class="form-group">
-                <label for="name">Name <span class="required">*</span></label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email <span class="required">*</span></label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            </div>
-
-            <div class="form-group">
-                <label for="ic-id">IC ID (Optional)</label>
-                <input type="text" id="ic-id" name="ic-id" placeholder="Enter your IC ID">
-            </div>
-
-            <div class="form-group">
-                <button type="submit" class="subscribe-btn">Subscribe</button>
-            </div>
-        </form>
+    <div class="redirect-message">
+        <h2>Redirecting to Sign Up Form...</h2>
+        <div class="spinner"></div>
+        <p>You will be redirected to the Google Form in a moment.</p>
+        <p>If you are not redirected automatically, <a href="https://docs.google.com/forms/d/e/1FAIpQLScJR0Z_w6YG7iKdmOny0yvLplqP_9Pe2hZVZoW5ZRTCPuUy1A/viewform?usp=sf_link" class="redirect-link">click here</a>.</p>
     </div>
-        
-    <script src="js/signup.js"></script>
-        
 </body>
 </html>
