@@ -64,6 +64,13 @@ body {
     font-size: 1.7rem; /* Slightly larger text for logo */
     font-weight: bold;
     text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+    opacity: 0.8;
 }
 
 .logo img {
